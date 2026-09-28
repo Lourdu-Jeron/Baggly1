@@ -24,8 +24,7 @@ export const perfBg = l => ({high:"#dcfce7",mid:"#fef9c3",low:"#fee2e2"}[l]);
 export const downloadCSV = (data, name) => {
   if (!data.length) return;
   const keys = Object.keys(data[0]);
-  const rows = [keys.join(","), ...data.map(r=>keys.map(k=>`"${r[k]}"`).join(","))];
-  const a = document.createElement("a");
+const rows = [keys.join(","), ...data.map(r=>keys.map(k=>`"${String(r[k] ?? "").replace(/"/g,'""')}"`).join(","))];  const a = document.createElement("a");
   a.href = URL.createObjectURL(new Blob([rows.join("\n")],{type:"text/csv"}));
   a.download = name; a.click();
 };

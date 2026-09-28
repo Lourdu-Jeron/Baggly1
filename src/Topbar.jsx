@@ -11,7 +11,7 @@ export const Topbar = ({ cur, setCmdOpen, addToast, notifOpen, setNotif, unread,
       </div>
       <div style={{display:"flex",alignItems:"center",gap:5,padding:"3px 10px",background:"var(--card2)",borderRadius:20,border:"1px solid var(--border)",marginLeft:8}}>
         <span className="live-dot"/>
-        <span style={{fontSize:10,fontWeight:600,color:"var(--text2)"}}>Live</span>
+        <span style={{fontSize:10,fontWeight:600,color:"var(--text2)"}}>Demo data</span>
       </div>
     </div>
     <div style={{display:"flex",alignItems:"center",gap:8}}>
